@@ -19,13 +19,13 @@ def main():
     logo = Image.open(logo_image)
     # Изменение размера логотипа
     resized_logo = logo.resize((100, 100))
-    st.set_page_config(page_title="YaGPT чатбот", page_icon="📖")   
+    st.set_page_config(page_title="YandexGPT чат-бот", page_icon="📖")   
     # Отображаем лого измененного небольшого размера
     st.image(resized_logo)
-    st.title('📖 YaGPT чатбот')
+    st.title('📖 YandexGPT чат-бот')
     """
     Чатбот на базе YandexGPT, который запоминает контекст беседы. Чтобы "сбросить" контекст обновите страницу браузера.\n
-    Вы можете выбрать какую [YaGPT модель](https://cloud.yandex.ru/ru/docs/yandexgpt/concepts/models) использовать, а также настроить размер ее контекстного окна и параметры креативности (см. окно слева). 
+    Вы можете выбрать какую [YandexGPT модель](https://cloud.yandex.ru/ru/docs/yandexgpt/concepts/models) использовать, а также настроить размер ее контекстного окна и параметры креативности (см. окно слева). 
     Историю сообщений можно посмотреть ниже.
     [Исходный код приложения](https://github.com/dzhechko/yagpt-chat-bot-lcel/blob/main/yagpt-chat-with-history-02.py)
     """
@@ -34,10 +34,10 @@ def main():
     # вводить все credentials в графическом интерфейсе слева
     # Sidebar contents
     with st.sidebar:
-        st.title('\U0001F917\U0001F4ACYaGPT чатбот')
+        st.title('\U0001F917\U0001F4ACYandexGPT чат-бот')
         st.markdown('''
         ## О программе
-        Данный YaGPT чатбот использует следующие компоненты:
+        Данный YandexGPT чат-бот использует следующие компоненты:
         - [Yandex GPT](https://cloud.yandex.ru/services/yandexgpt)
         - [Yandex GPT for Langchain](https://python.langchain.com/docs/integrations/chat/yandex)
         - [Streamlit](https://streamlit.io/)
@@ -75,7 +75,7 @@ def main():
     # else:
     #     yagpt_api_key = st.sidebar.text_input("YaGPT API Key", type="password")
     if not yagpt_api_key:
-        st.info("Укажите [YaGPT API ключ](https://cloud.yandex.ru/ru/docs/iam/operations/api-key/create#console_1) для запуска чатбота")
+        st.info("Укажите [YandexGPT API ключ](https://cloud.yandex.ru/ru/docs/iam/operations/api-key/create#console_1) для запуска чатбота")
         st.stop()
 
     with st.sidebar:
