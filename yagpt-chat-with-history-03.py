@@ -67,7 +67,7 @@ def main():
     #     yagpt_folder_id = st.sidebar.text_input("YaGPT folder ID", type="password")
     yagpt_folder_id = st.sidebar.text_input("YC folder ID", type="password")
     if not yagpt_folder_id:
-        st.info("Укажите [YC folder ID](https://cloud.yandex.ru/ru/docs/yandexgpt/quickstart#yandex-account_1) для запуска чатбота")
+        st.info("Укажите [YC folder ID](https://cloud.yandex.ru/ru/docs/yandexgpt/quickstart#yandex-account_1) для запуска чат-бота")
         st.stop()
 
     # # Получение ключа YaGPT API
@@ -77,7 +77,7 @@ def main():
     #     yagpt_api_key = st.sidebar.text_input("YaGPT API Key", type="password")
     yagpt_api_key = st.sidebar.text_input("YaGPT API Key", type="password")
     if not yagpt_api_key:
-        st.info("Укажите [YandexGPT API ключ](https://cloud.yandex.ru/ru/docs/iam/operations/api-key/create#console_1) для запуска чатбота")
+        st.info("Укажите [YandexGPT API ключ](https://cloud.yandex.ru/ru/docs/iam/operations/api-key/create#console_1) для запуска чат-бота")
         st.stop()
 
     with st.sidebar:
@@ -99,7 +99,7 @@ def main():
         'Выберите какой системный промпт использовать',
         ('По умолчанию', 'Задать самостоятельно')
     )
-    default_prompt = "Ты очень полезный чатбот, тебя зовут YandexGPT. Можешь общаться на разные темы. При ответе на вопросы будь краток, используй 30 слов или меньше."
+    default_prompt = "Ты очень полезный чат-бот, тебя зовут YandexGPT. Можешь общаться на разные темы. При ответе на вопросы будь краток, используй 30 слов или меньше."
     # Если выбрана опция "Задать самостоятельно", показываем поле для ввода промпта
     if prompt_option == 'Задать самостоятельно':
         custom_prompt = st.sidebar.text_input('Введите пользовательский промпт:')
